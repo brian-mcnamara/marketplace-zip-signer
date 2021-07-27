@@ -9,3 +9,11 @@ dependencies {
     implementation("com.github.spullara.cli-parser:cli-parser:1.1.2")
     implementation(project(":lib"))
 }
+
+tasks {
+    jar {
+        manifest {
+            attributes("Main-Class" to "org.jetbrains.zip.signer.GoogleCloudSignerCli")
+        }
+    }
+}
